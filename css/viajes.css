@@ -1,0 +1,260 @@
+/* -------------------------
+CONFIGURACIÓN GENERAL
+------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+
+    background-image: url("/imagenes/Black_colour.jpg.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+/* -------------------------
+CABECERA
+------------------------- */
+
+.banner {
+    width: 100vw;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    background-image: url("/imagenes/cabecera1.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner h1 {
+    color: white;
+    font-size: 65px;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 10px black;
+}
+
+.banner p {
+    margin-top: 15px;
+    color: white;
+    font-size: 22px;
+    text-shadow: 2px 2px 8px black;
+}
+.banner h1 {
+position: absolute;
+
+```
+top: 50%;
+left: 50%;
+
+transform: translate(-50%, -50%);
+
+color: white;
+
+font-size: 80px;
+
+letter-spacing: 8px;
+
+text-shadow: 2px 2px 8px black;
+```
+
+}
+
+/* FRASE */
+
+.banner p {
+position: absolute;
+
+```
+top: 65%;
+left: 50%;
+
+transform: translate(-50%, -50%);
+
+color: white;
+
+font-size: 25px;
+
+text-shadow: 2px 2px 6px black;
+```
+
+}
+
+/* -------------------------
+ÍNDICE / MENÚ
+------------------------- */
+
+.menu {
+
+```
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+gap: 40px;
+
+padding: 20px;
+
+background-color: #ffffff;
+
+border-bottom: 2px solid #008c95;
+```
+
+}
+
+/* ENLACES */
+
+.menu a {
+
+```
+text-decoration: none;
+
+color: #333333;
+
+font-weight: bold;
+
+font-size: 16px;
+```
+
+}
+
+/* CUANDO PASAMOS EL RATÓN */
+
+.menu a:hover {
+
+```
+color: #008c95;
+```
+
+}
+
+/* -------------------------
+SECCIONES
+------------------------- */
+
+section {
+
+```
+min-height: 500px;
+
+padding: 70px;
+
+text-align: center;
+```
+
+}
+
+section h2 {
+
+```
+font-size: 35px;
+
+margin-bottom: 25px;
+
+color: #008c95;
+```
+
+}
+
+section p {
+
+```
+font-size: 18px;
+
+max-width: 700px;
+
+margin: auto;
+
+line-height: 1.6;
+```
+
+}
+
+/* -------------------------
+FOOTER
+------------------------- */
+
+footer {
+
+```
+background-color: #222222;
+
+color: white;
+
+text-align: center;
+
+padding: 25px;
+```
+
+}
+/* ORDEN GENERAL DE LA PÁGINA */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    min-height: auto;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 20px;
+}
+
+section p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* FORMULARIO */
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+textarea {
+    min-height: 130px;
+}
+
+button {
+    width: 150px;
+    align-self: center;
+    padding: 12px;
+    margin-top: 15px;
+}
