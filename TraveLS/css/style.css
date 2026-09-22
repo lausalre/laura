@@ -1,0 +1,821 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #102a43;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================
+   CABECERA
+========================= */
+
+.header {
+    width: 100%;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    background-color: white;
+
+    position: relative;
+    z-index: 10;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    width: 200px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+    transform: translateY(-8px);
+}
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu a {
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #183b56;
+
+    padding: 8px 0;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #008c95;
+}
+
+.menu a.activo {
+    color: #008c95;
+    font-weight: bold;
+    border-bottom: 3px solid #008c95;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton,
+.boton-header,
+.boton-pequeno {
+    display: inline-block;
+
+    background-color: #008c95;
+    color: white;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+.boton {
+    padding: 14px 24px;
+    font-size: 15px;
+}
+
+.boton-header {
+    padding: 12px 22px;
+    font-size: 14px;
+}
+
+.boton-pequeno {
+    padding: 9px 17px;
+    font-size: 12px;
+}
+
+.boton:hover,
+.boton-header:hover,
+.boton-pequeno:hover {
+    background-color: #006f77;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    height: 570px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.hero > img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.62),
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0)
+    );
+}
+
+.hero-contenido {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 50%;
+    left: 8%;
+
+    transform: translateY(-50%);
+
+    color: white;
+
+    max-width: 480px;
+}
+
+.hero-contenido h1 {
+    font-size: 64px;
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+.hero-contenido p {
+    font-size: 19px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   CARACTERÍSTICAS
+========================= */
+
+.caracteristicas {
+    width: 88%;
+    max-width: 1200px;
+
+    margin: 55px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 35px;
+
+    text-align: center;
+}
+
+.caracteristica img {
+    width: 70px;
+    height: 70px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin: 0 auto 18px;
+
+    border: 4px solid #e5f7f8;
+}
+
+.caracteristica h3 {
+    font-size: 17px;
+
+    margin-bottom: 10px;
+
+    color: #102a43;
+}
+
+.caracteristica p {
+    color: #627d98;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   SOBRE NOSOTROS
+========================= */
+
+.sobre-nosotros {
+    width: 88%;
+    max-width: 1200px;
+
+    margin: 80px auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.sobre-imagen img {
+    width: 100%;
+    height: 330px;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+}
+
+.sobre-texto h2 {
+    font-size: 40px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    color: #627d98;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+
+    max-width: 500px;
+}
+
+.sobre-texto .boton {
+    margin-top: 12px;
+}
+
+
+/* =========================
+   DESTINOS POPULARES
+========================= */
+
+.destinos-populares {
+    width: 88%;
+    max-width: 1200px;
+
+    margin: 80px auto;
+}
+
+.titulo-seccion {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.titulo-seccion h2 {
+    font-size: 32px;
+}
+
+.titulo-seccion a {
+    color: #008c95;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.destinos-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.destino-card {
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+.destino-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.destino-card > img {
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+}
+
+.destino-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 16px;
+}
+
+.destino-info h3 {
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+.destino-info p {
+    font-size: 13px;
+
+    color: #829ab1;
+}
+
+
+/* =========================
+   BANNER DESTINOS
+========================= */
+
+.banner-destinos {
+    height: 350px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.banner-destinos img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.banner-destinos::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.30);
+}
+
+.banner-texto {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: white;
+
+    text-align: center;
+
+    width: 90%;
+}
+
+.banner-texto h1 {
+    font-size: 50px;
+
+    margin-bottom: 12px;
+}
+
+.banner-texto p {
+    font-size: 18px;
+}
+
+
+/* =========================
+   PÁGINA DESTINOS
+========================= */
+
+.seccion-destinos {
+    width: 88%;
+    max-width: 1200px;
+
+    margin: 50px auto 80px;
+}
+
+.filtros {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 40px;
+
+    flex-wrap: wrap;
+}
+
+.filtro {
+    border: 1px solid #cbd5e1;
+
+    background-color: white;
+
+    color: #183b56;
+
+    padding: 11px 22px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.filtro:hover,
+.filtro.activo {
+    background-color: #008c95;
+
+    border-color: #008c95;
+
+    color: white;
+}
+
+.grid-destinos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.destino-completo {
+    background-color: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+.destino-completo:hover {
+    transform: translateY(-6px);
+}
+
+.destino-completo > img {
+    width: 100%;
+    height: 240px;
+
+    object-fit: cover;
+}
+
+.destino-completo-info {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px;
+}
+
+.destino-completo-info h2 {
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.destino-completo-info p {
+    color: #829ab1;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    width: 88%;
+    max-width: 1200px;
+
+    height: 300px;
+
+    margin: 0 auto 80px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+}
+
+.cta > img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.cta::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.cta-texto {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 50%;
+    left: 6%;
+
+    transform: translateY(-50%);
+
+    color: white;
+}
+
+.cta-texto h2 {
+    font-size: 34px;
+
+    margin-bottom: 10px;
+}
+
+.cta-texto p {
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #102f3a;
+
+    color: white;
+}
+
+.footer-imagen {
+    height: 260px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.footer-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.footer-imagen::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 30, 40, 0.45);
+}
+
+.frase-footer {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    font-size: 36px;
+
+    font-style: italic;
+
+    font-weight: bold;
+
+    width: 90%;
+}
+
+.footer-contenido {
+    min-height: 120px;
+
+    width: 88%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.logo-footer {
+    display: none;
+}
+
+.footer-menu {
+    display: flex;
+
+    gap: 25px;
+}
+
+.footer-menu a {
+    font-size: 13px;
+
+    color: #d9e2ec;
+
+    transition: 0.3s;
+}
+
+.footer-menu a:hover {
+    color: #5eead4;
+}
+
+.footer-contenido p {
+    font-size: 13px;
+
+    color: #9fb3c8;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        height: auto;
+
+        padding: 20px 5%;
+
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+    .menu {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .hero {
+        height: 500px;
+    }
+
+    .hero-contenido h1 {
+        font-size: 48px;
+    }
+
+    .caracteristicas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .destinos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre-nosotros {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .grid-destinos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+
+        padding: 30px 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .menu {
+        flex-wrap: wrap;
+    }
+
+    .boton-header {
+        display: none;
+    }
+
+    .hero {
+        height: 480px;
+    }
+
+    .hero-contenido {
+        left: 7%;
+    }
+
+    .hero-contenido h1 {
+        font-size: 42px;
+    }
+
+    .hero-contenido p {
+        font-size: 16px;
+    }
+
+    .caracteristicas {
+        grid-template-columns: 1fr;
+    }
+
+    .destinos-grid,
+    .grid-destinos {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-texto h1 {
+        font-size: 36px;
+    }
+
+    .frase-footer {
+        font-size: 27px;
+    }
+
+    .footer-menu {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+}
